@@ -1,0 +1,120 @@
+<!DOCTYPE html>   
+<html>   
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: rgb(32, 5, 5);  
+}  
+button {   
+       background-color: #4c7faf;   
+       width: 100%;  
+        color: rgb(15, 10, 1);   
+        padding: 10px;   
+        margin: 6px 0px;   
+        border: #03213d 2px solid;   
+        border-radius: 5px;
+        cursor: pointer;   
+         }   
+
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 6px 0;  
+        padding: 10px 10px;   
+        display: inline-block;   
+        /* border: 2px solid green;    */
+        box-sizing: border-box;
+        border-bottom: #03213d 6px solid;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+        left: 50%;
+        border: #03213d 2px solid;
+        border-radius: 5px;
+    }   
+
+    .signup {   
+        position: absolute;
+        left: 85%;
+        background-color: #4c7faf;   
+        width: auto;
+        height: auto;
+        top: 25px;
+        border-radius: 6px;
+        border: #03213d 2px solid;
+    }  
+
+    .outer-container {   
+        padding: 10px;   
+        width: 600px;
+        height: 400px;
+        top: 20%;
+        position: absolute;
+        left: 20%;
+        border-radius: 6px;
+        background: linear-gradient(to bottom, rgb(172, 221, 238), rgb(3, 50, 66));
+        
+    }   
+        
+    .container {   
+        padding: 10px;   
+        background-color: rgb(21, 151, 194);  
+        width: 90%;
+        height: 60%;
+        top: 30%;
+        position: absolute;
+        left: 8px;
+        border-radius: 6px;
+        border-bottom: #03213d 6px solid;
+        border-right: #03213d 6px solid;
+        
+    }   
+</style>   
+</head>    
+<body> 
+    <form>  
+      <div class="outer-container">
+        <h1> Member Login </h1> 
+        <p> sign into your account</p>
+        <button type="button" class="signup" onclick="signup()"> Sign Up</button>
+        <div class="container">   
+            <label>Username : </label>   
+            <input type="text" placeholder="Enter Username" name="username" size ="20" required>  
+            <label>Password : </label>   
+            <input type="password" placeholder="Enter Password" name="password" required>  
+            <button type="submit" onclick="check(this.form)">Login</button>   
+            <input type="checkbox" checked="checked"> Remember me   
+            <button type="button" class="cancelbtn"> Cancel</button>   
+            Forgot <a href="#"> password? </a>   
+        </div>   
+      </div>
+    </form>   
+    <script language="javaScript">
+    function check(form) 
+    {
+        if(form.username.value == "myuserid" && form.password.value == "mypswrd")
+        {
+             window.open('E:/fe/first.html', '_blank');
+
+        }
+        else
+        {
+            alert("Error Password or username")
+        }
+    }
+
+    function signup()
+    {
+        window.open('C:/Users/kavikshana.u/Desktop/login/Login-Form/signup.html', '_blank');
+    }
+
+    </script>
+</body>     
+</html>  
